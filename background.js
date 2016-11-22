@@ -432,6 +432,8 @@ chrome.extension.onMessage.addListener(function(message, sender, sendResponse) {
             function(tab) {
                 detect_account_cookies(tab[0].url, undefined, "all", 180, undefined, undefined, true, true)
             });
+
+        FindAuthCookieDiplay.init();
     } else if (message.type == "backup-cookies") {
         console.log("APPU DEBUG: Got message: " + message.type);
         chrome.tabs.query({

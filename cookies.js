@@ -5432,6 +5432,12 @@ function cookie_investigator(account_cookies,
             console.log("APPU DEBUG: Testing done?: NO");
         }
 
+        FindAuthCookieDiplay.isLoading(false, {
+          cookie_sets: s_a_LLB_cookiesets_array,
+          page_reloads: tot_page_reloads,
+          url: my_url
+        });
+
         terminate_cookie_investigating_tab(my_tab_id);
         window.clearTimeout(shut_tab_forcefully);
     }
@@ -5557,8 +5563,7 @@ function cookie_investigator(account_cookies,
             if (has_not_redirected) {
                 // SERIOUS error branch: When starting with no cookies, user should not be logged-in
                 //                       Critical error in Appu code.
-                console.log("APPU Error: NOT EXPECTED: Usernames detected for 'st_start_with_no_cookies', " +
-                    "num-pwd-boxes: " + num_pwd_boxes);
+                console.log("APPU Error: NOT EXPECTED: Usernames detected for 'st_start_with_no_cookies'");
                 report_fatal_error("Start-with-no-cookies-usernames-found");
                 was_result_expected = false;
             } else {

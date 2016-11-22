@@ -5,12 +5,12 @@
   "icons": {
     "128" : "images/appu_new128.png",
     "16"  : "images/appu_new16.png",
-    "32"  : "images/appu_new32.png",	   
+    "32"  : "images/appu_new32.png",
     "48"  : "images/appu_new48.png",
     "64"  : "images/appu_new64.png"
   },
   "browser_action": {
-    "default_icon": "images/appu_new19.png", 
+    "default_icon": "images/appu_new19.png",
     "default_title": "Appu: Password Protector",
     "default_popup": "popup.html"
   },
@@ -22,7 +22,7 @@
       "matches": ["http://*/*", "https://*/*"],
       "css" : ["thirdparty/jquery-ui-1.9.1.custom/css/appuwarning/jquery-ui-1.9.1.custom.css",
 	       "passwd.css"],
-      "js" : ["thirdparty/sha1.js", 
+      "js" : ["thirdparty/sha1.js",
       	      "thirdparty/sprintf-0.7-beta1.js",
 	      "thirdparty/jquery-ui-1.9.1.custom/js/jquery-1.8.2.js",
 	      "thirdparty/jquery-ui-1.9.1.custom/js/jquery-ui-1.9.1.custom.js",
@@ -30,21 +30,21 @@
     }
   ],
   "permissions": [
-     "tabs",	
-     "storage",	 
-     "system.cpu",	 
-     "system.memory",	 
+     "tabs",
+     "storage",
+     "system.cpu",
+     "system.memory",
      "unlimitedStorage",
      "cookies",
      "*://*/",
-     "http://appu.gtnoise.net:5005/post_report",	 	 
-     "http://192.168.56.101:59000/",	 	 
+     "http://appu.gtnoise.net:5005/post_report",
+     "http://192.168.56.101:59000/",
      "webRequest",
      "webRequestBlocking",
      "*://*/"
   ],
   "web_accessible_resources": [
-     "images/appu_new19.png",			      
+     "images/appu_new19.png",
      "thirdparty/jquery-ui-1.9.1.custom/css/appuwarning/images/ui-icons_ffffff_256x240.png",
      "thirdparty/jquery-ui-1.9.1.custom/css/appuwarning/images/ui-icons_ef8c08_256x240.png",
      "thirdparty/jquery-ui-1.9.1.custom/css/appuwarning/images/ui-icons_222222_256x240.png",
