@@ -4079,10 +4079,8 @@ function cookie_investigator(account_cookies,
 
             //update the status first.
             if (has_not_redirected) {
-                if (bool_pwd_box_present) {
                     console.log("APPU DEBUG: Found restrictive cookieset: " +
                         JSON.stringify(expand_state_disabled_cookies));
-                }
             }
 
             tot_expand_state_cookiesets_tested_overall += 1;
@@ -5435,6 +5433,7 @@ function cookie_investigator(account_cookies,
         FindAuthCookieDiplay.isLoading(false, {
           cookie_sets: s_a_LLB_cookiesets_array,
           page_reloads: tot_page_reloads,
+          cookie_total: tot_cookies,
           url: my_url
         });
 
@@ -5526,7 +5525,7 @@ function cookie_investigator(account_cookies,
                 }
             }
         } else if (my_state == 'st_verification_epoch') {
-            console.log(statusCodeService.hasRedirected());
+            console.log(statusCodeService.status_codes);
             num_verification_page_load_attempts += 1;
             if (page_load_success || has_not_redirected) {
                 num_verification_page_load_success += 1;
@@ -5542,8 +5541,7 @@ function cookie_investigator(account_cookies,
             } else {
                 if (page_load_success) {
                     // SERIOUS error branch (User probably initiated log out or our testing messed up user-session)
-                    console.log("APPU Error: NOT EXPECTED: User is NOT logged-in, num-pwd-boxes(" + num_pwd_boxes +
-                        "), for test 'st_verification_epoch'");
+                    console.log("APPU Error: NOT EXPECTED: User is NOT logged-in for test 'st_verification_epoch'");
                     report_fatal_error("Verification-epoch-page-load-no-usernames");
                     //console.log("Here here: SHADOW_COOKIE_STORE: " + JSON.stringify(shadow_cookie_store));
                     was_result_expected = false;
