@@ -14,8 +14,10 @@ Modification of Appu with HTTP Response Status Codes
 
 #### Notes
 These files are quite large.  Here are a list of the changes for both files:
+
 ##### background.js
 * Line 436 -- Added line to initialize FindAuthCookieDiplay
+
 ##### cookies.js
 * Change everywhere where usernames were detected to using the StatusCodeService to check whether the page has redirected
 * Line 9 -- Added line to initialize StatusCodeService
